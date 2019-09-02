@@ -1,0 +1,113 @@
+<!Doctype>
+<Html>
+    <link rel="icon" type="icon" href="logo.jpg">
+    <link rel="stylesheet" type="text/css" href="styleAct6.css">
+<head>
+    <title>Activity 6.1</title>
+    <script type="text/javascript" src="scriptAct6.js"></script>
+</head>
+	<body>
+		<header>
+            <a href="home.html"><img class="redgie" src="profile.jpg"><img class="aero" src="aero.jpg"></a>
+            <h2 class="name1">Redgie Gravador</h2>
+            <h2 class="name2">Aeromel Laure</h2>      
+    	</header>
+    	<hr>
+    	<table class = "nav">
+            <tr>
+                <td>
+                    <a href="act6_1.html"><button class="butnav"> Activity 6.1 </button></a>
+                    <a href="act6_2.html"><button class="butnav"> Activity 6.2 </button></a>
+                    <a href="act6_3.html"><button class="butnav"> Activity 6.3 </button></a>
+                    <a href="act6_4.html"><button class="butnav"> Activity 6.4 </button></a>
+                    <a href="act6_5.html"><button class="butnav"> Activity 6.5 </button></a>
+                    <a href="act6_6.html"><button class="butnav"> Activity 6.6 </button></a>
+                    <a href="act6_7.html"><button class="butnav"> Activity 6.7 </button></a>
+                    <a href="act6_8.html"><button class="butnav"> Activity 6.8 </button></a>    
+                </td>
+            </tr> 
+        </table>
+        <div class="marginbottom">
+            <center><h2 class="welcome">Specifications</h2></center>
+        	<fieldset class="act1main">
+                <div class="margleft1">
+            		Width of room(ft) : <input type="number" class="input width100" id="rmWidth"><br><br>
+                    Lenght of room(ft) : <input type="number" class="input width100" id="rmLenght"><br><br>
+                    height of room(ft) : <input type="number" class="input width100" id="rmHeight"><br><br>
+
+                    Cost per square foot - wallpaper : <input type="number" class="input width100" id="wallpaper"><br><br>
+                    Cost per square foot - Carpet : <input type="number" class="input width100" id="Carpet"><br><br>
+                    Cost per square foot - Ceil Paint : <input type="number" class="input width100" id="paint"><br><br>
+                    Discount in percent : <input type="number" class="input width100" id="discountValue"><br><br>
+                    <p>Labor cost : Php 2.50</p>
+                    <center><a href="#measures"><button onclick="serviceFee()" class="locate">Submit</button></a></center> 
+                </div>
+        	</fieldset>
+        </div>
+        
+        <div id="measures" style="display:none"><br><br><br>
+            <div>
+            <CENTER><H3>Measurements</H3></CENTER>
+            <CENTER>
+                <fieldset class="measurements">
+                <section class="left">
+                    <p >Lenght</p>
+                    <p >Width</p>
+                    <p >Height</p>
+                    <p >Floor Area</p>
+                    <p >Wall Area</p>
+                    <p >Ceil Area</p>
+                </section>
+                <section class="right">
+                    <p id="resLenght">Result</p>
+                    <p id="resWidth">Result</p>
+                    <p id="resHeight">Result</p>
+                    <p id="resFloor">Result</p>
+                    <p id="resWall">Result</p>
+                    <p id="resCeil">Result</p>
+                </section>
+            </fieldset>
+            </div>
+            
+            <div class="description">
+                <CENTER><h3>CHARGES</h3></CENTER>
+                <section class="descrip">
+                    <h4>DESCRIPTION</h4><br>
+                    <p >Carpet</p>
+                    <p >Wallpaper</p>
+                    <p >Paint</p>
+                    <p >Total Area</p>
+                    <p >Labor</p><br><br>
+                    <p >INSTALLED PRICE</p>
+                    <P>Discount</P><br><br>
+                    <p>SUBTOTAL</p>
+                    <p>Tax</p>
+                    <p>TOTAL</p>
+                </section>
+                <section class="cost">
+                    <h4>COST/SQ. FT.</h4><br>
+                    <p id="carpetCost">xxx.xx</p>
+                    <p id="wallCost">xxx.xx</p>
+                    <p id="paintCost">xxx.xx</p>
+                    <p id="totalAreaCost">xxx.xx</p>
+                    <p >2.50</p><br><br><br><br>
+                    <p id="displayDiscountValue">xx%</p><br><br><br><br>
+                    <p>12%</p>
+
+                </section>
+                <section class="charge">
+                    <h4>CHARGE</h4><br>
+                    <p id="carpetCharge">Result</p>
+                    <p id="wallCharge">Result</p>
+                    <p id="paintCharge">Result</p>
+                    <p id="totalAreaCharge">Result</p>
+                    <p id="laborCharge">Result</p><br><br>
+                    <p id="installedPriceCharge">Result</p>
+                    <p id="discountedCharge">Result</p><br><br>
+                    <p id="subtotalCharge">Result</p>
+                    <p id="taxedCharge">Result</p>
+                    <p id="finalCharge">Result</p>
+                </section>
+            </div>
+	</body>
+</thml>

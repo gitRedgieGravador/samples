@@ -1,0 +1,14 @@
+#profile {
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.liImg {
+    height: 20%;
+    width: 20%;
+}

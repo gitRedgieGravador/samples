@@ -1,0 +1,104 @@
+body {
+  background-color:  rgb(0, 0, 51);
+  
+}
+
+h1 {
+  font-size: 20x;
+  font-family: Arial;
+  color: white;
+}
+
+.t1 {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius:25px;
+  width: 30%;
+  border-collapse: collapse; 
+  background-color: pink;
+}
+
+.t1 th, .t1 td {
+  border: 1px solid #000000;
+  padding: 15px;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #000000;
+  color: white;
+}
+
+.t2 {
+    position: relative;
+    width: 300px;
+    height: 40px;
+    top: 180px;
+    left: 30%;
+    word-spacing: 15px;
+
+}
+
+.t3 {
+    position: relative;
+    width: 400px;
+    height: 40px;
+    top: 180px;
+    left: 300px;
+    word-spacing: 15px;
+}
+
+.t4 {
+    position: relative;
+    width: 400px;
+    height: 40px;
+    top: 180px;
+    left: 380px;
+    word-spacing: 15px;
+}
+
+.choice {
+  font-family: serif;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+.btn {
+  border-radius: 10px;
+  height: 70px;
+  width: 70px;
+  padding: 25px;
+  word-spacing: 0;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #54d4d8;
+}
+
+.t8 td {
+  border: 1px solid transparent;
+}
+
+
+.t8 {
+  position: absolute;
+  right: 30%;
+  top: 265px;
+  cursor: pointer;
+}
+
+.diceImg {
+  width: 60px;
+  height: 60px;
+  /* outline: #4CAF50 solid 2px; */
+}
+
+input {
+  height: 20px;
+  width: 20px;
+}

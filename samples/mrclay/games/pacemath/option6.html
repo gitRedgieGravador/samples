@@ -1,0 +1,283 @@
+<!Doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="icon" href="images/diceSix.png">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/multiplication.js"></script>
+    <script>
+        window.onload = function () {
+            update(['left1', 'left2', 'right1', 'right2']);
+            var fiveMinutes = 30 * 2,
+                display = document.querySelector('#time');
+            startTimer(fiveMinutes, display);
+        }
+    </script>
+    <title>Option 6</title>
+    <style>
+        .overlay {
+        height: 0%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(0, 0, 0);
+        background-image: url(https://i.imgur.com/QVFUaZP.jpg?1);
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow-y: hidden;
+        transition: 0.5s;
+    }
+
+    .overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+        font-family: times, sans-serif;
+        font-size: 50px;
+        
+    }
+    .overlay .overlay-content button {
+          padding: 5px 35px;
+          font-size: 20px;
+          cursor: pointer;
+          text-align: center;
+          border: none;
+          color: #fff;
+          background-color: #9900cc;
+          border-radius: 30px;
+          box-shadow: 0 5px #999;
+          height: 60px;
+          margin: 10px;
+    }
+
+    .overlay .overlay-content button:hover {
+      background-color: #3366ff
+    }
+
+    .overlay .overlay-content button:active {
+      background-color: #ff33cc;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+
+    .overlay-content h1 {
+        text-shadow: 3px 2px rgb(255, 0, 102);
+    }
+
+    }
+
+    .overlay a,h2 {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .overlay a:hover, .overlay a:focus {
+        color: #f1f1f1;
+    }
+
+    .overlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+    }
+
+    @media screen and (max-height: 450px) {
+        .overlay {
+            overflow-y: auto;
+        }
+
+        .overlay a {
+            font-size: 20px
+        }
+
+        .overlay .closebtn {
+            font-size: 40px;
+            top: 15px;
+            right: 35px;
+        }
+    }
+
+    #firstOption {
+        padding: 1%;
+        width: 400px;
+        height: 350px;
+        border: solid 1px black;
+        background-color: white;
+        z-index: 10px;
+        margin-top: 50px;
+        border-radius: 50px;
+        display: none;
+    }
+    #next {
+            height: 0%;
+    }
+
+    .playbutton {
+            position: relative;
+            width: 100px;
+            height: 50px;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: rgb(0, 204, 255);
+    }
+
+    .playbutton:hover {
+            background-color: rgb(0, 102, 255);
+    }
+    </style>
+</head>
+
+<body>
+    <div id="lose" class="overlay">
+        <div class="overlay-content">
+            <h1>Your time was Consumed!</h1>
+            <button type="button"><a href="option6.html">Play Again</a></button>
+        </div>
+    </div>
+
+    <div id="win" class="overlay">
+        <div class="overlay-content">
+            <h1>You Win!</h1>
+            <h2  id="average" >Average Speed: </h2>
+            <a href="option6.html"><button type="button">Play Again</button></a>
+            <button type="button" onclick = "openDiv('next')">Next Level</button>
+        </div>
+    </div>
+    <div id="next" class="overlay">
+        <center>
+            <div id="firstOption">
+                    <h2>PaceMath Option 1</h2>
+                    <p class="instruction"><b>Instruction :&nbsp;&nbsp; Count the number of dot/s from both sides of the
+                            operator and return their sum</p>
+                    <br>
+                    <img src="images/diceThree.png" class="diceImg">
+                    <img src="images/add.png" class="diceImg">
+                    <img src="images/diceOne.png" class="diceImg">
+                    <br>
+                    <p class="solution">3 + 1 = 4</p>
+                    <br>
+                    <button class="cancelbutton" onclick="hide('firstOption');show('OptionPage')"><b>Cancel</button>
+                    <a href="option1.html"><button class="playbutton"><b>Play</button></a>
+            </div>
+        </center>
+    </div>
+    <div id="failed" class="overlay">
+        <div class="overlay-content">
+            <h1>You Failed!</h1>
+            <h2>Your score is less than 80%. </h2>
+            <button type="button"><a href="option6.html">Play Again</a></button>
+        </div>
+    </div>
+    <center>
+        <h1>PaceMath Challenge</h1>
+        <div class="t1">
+            <table>
+                <tr>
+                    <th>Correct</th>
+                    <th>Wrong</th>
+                    <th>Time Limit</th>
+                    <th>Remaining Time</th>
+                </tr>
+                <tr></tr>
+                <td>
+                    <p type="number" id="r">0</p>
+                </td>
+                <td>
+                    <p type="number" id="w">0</p>
+                </td>
+                <td>1 minutes</td>
+                <td><span id="time"></span></td>
+                </tr>
+            </table>
+            <input type="number" value="0" id="Rightval" style="display:none">
+            <input type="number" value="0" id="Wrongval" style="display:none">
+        </div>
+    </center>
+    <div class="t3" id="oper4">
+        <img src="images/diceOne.png" class="diceImg" id="left1">
+        <img src="images/diceTwo.png" class="diceImg" id="left2">
+        <img src="images/multiply.png" class="diceImg" id="opt1">
+        <img src="images/diceThree.png" class="diceImg" id="right1">
+        <img src="images/diceThree.png" class="diceImg" id="right2">
+    </div>
+    <div class="t8">
+        <p class="choice">Choices</p>
+        <table>
+            <tr>
+                <td>
+                    <button class="btn" type="button" id="choice1" value="1"
+                        onclick="logval('choice1');update(['left1', 'left2', 'right1', 'right2'])">1</button>
+                </td>
+                <td>
+                    <button class="btn" type="button" id="choice2" value="2"
+                        onclick="logval('choice2');update(['left1', 'left2', 'right1', 'right2'])">2</button>
+                </td>
+                <td>
+                    <button class="btn" type="button" id="choice3" value="3"
+                        onclick="logval('choice3');update(['left1', 'left2', 'right1', 'right2'])">3</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn" type="button" id="choice4" value="4"
+                        onclick="logval('choice4');update(['left1', 'left2', 'right1', 'right2'])">4</button>
+                </td>
+                <td>
+                    <button class="btn" type="button" id="choice5" value="5"
+                        onclick="logval('choice5');update(['left1', 'left2', 'right1', 'right2'])">5</button>
+                </td>
+                <td>
+                    <button class="btn" type="button" id="choice6" value="6"
+                        onclick="logval('choice6');update(['left1', 'left2', 'right1', 'right2'])">6</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn" type="button" id="choice7" value="7"
+                        onclick="logval('choice7');update(['left1', 'left2', 'right1', 'right2'])">7</button>
+                </td>
+                <td>
+                    <button class="btn" type="button" id="choice8" value="8"
+                        onclick="logval('choice8');update(['left1', 'left2', 'right1', 'right2'])">8</button>
+                </td>
+                <td>
+                    <button class="btn" type="button" id="choice9" value="9"
+                        onclick="logval('choice9');update(['left1', 'left2', 'right1', 'right2'])">9</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn" type="button" id="choice10" value="10"
+                        onclick="logval('choice10');update(['left1', 'left2', 'right1', 'right2'])">10</button>
+                </td>
+                <td>
+                    <button class="btn" type="button" id="choice11" value="11"
+                        onclick="logval('choice11');update(['left1', 'left2', 'right1', 'right2'])">11</button>
+                </td>
+                <td>
+                    <button class="btn" type="button" id="choice12" value="12"
+                        onclick="logval('choice12');update(['left1', 'left2', 'right1', 'right2'])">12</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+</body>
+
+</html>

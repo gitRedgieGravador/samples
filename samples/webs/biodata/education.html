@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Final Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="myScript.js"></script>
+
+</head>
+<body>
+    <!--Header with logo business name and navigaion like -->
+    <header class="subheader">
+        <a href="home.html"><img class="subprofile" src="profile.jpg"></a>
+        
+        <h2 class="profilename">Redgie Gravador</h2>
+        <p class="workexp">Education</p>
+    </header>
+    <table class = "subnav">
+        <tr>
+            <td>
+                <a href="personal.html"><button class="butnav2">Personal</button></a>
+                <a href="workexperience.html"><button class="butnav2">Work Experience</button></a>
+                <a href="skillscapabilities.html"><button class="butnav2">Skill & Capabilities</button></a>
+                <a href="trainings.html"><button class="butnav2">Trainings</button></a>
+                <a href="affiliation.html"><button class="butnav2">Affiliation</button></a>
+                <a href="awardshonors.html"><button class="butnav2">Awards/Honors</button></a>
+                <a href="refferences.html"><button class="butnav2">Refferences</button></a>
+            </td>
+        </tr> 
+    </table>
+    <section class="imgusc">
+        <img class="logo2" src="https://www.affordablecebu.com/pictures/articles/graphics/University-of-San-Carlos-Logo.jpg"><br><br>
+        <img class="logo2" src="https://www.passerellesnumeriques.org/wp-content/uploads/2016/03/pn-logo.png">
+    </section>
+    <section class="imgsms">
+        <img  class="logo2" src="http://www.asmsi.org.ph/images/som_logo.jpg"><br><br>
+        <img  class="logo2" src="sci.png">
+    </section>
+    <br>
+    <main class="main">
+        <fieldset class="sumpersonal1 size">
+            <legend>Elementary</legend>
+            <center id="elementary">Amandayehan Elementary School (2005-2012)</center> 
+            <button type="button" onClick="update('elementary','edit','save')" id="edit">Update/Edit</button>
+            <button type="button" onClick="save('elementary','edit','save')" id="save" style="display:none">Save Changes</button> 
+        </fieldset>
+        <fieldset class="size">
+            <legend>Secondary</legend>
+            <center id="shs">Sisters Of Mary School-Boystown. Inc (2012 - 2016)</center>
+            <button type="button" onClick="update('shs','edit1','save1')" id="edit1">Update/Edit</button>
+            <button type="button" onClick="save('shs','edit1','save1')" id="save1" style="display:none">Save Changes</button>
+        </fieldset> 
+        <fieldset class="size">
+            <legend>College</legend>
+            <center id="usc">University Of San Carlos (Currently)</center>
+            <button type="button" onClick="update('usc','edit2','save2')" id="edit2">Update/Edit</button>
+            <button type="button" onClick="save('usc','edit2','save2')" id="save2" style="display:none">Save Changes</button>
+        </fieldset>
+    </main>
+    
+    
+</body>
+</html>

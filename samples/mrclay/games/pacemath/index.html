@@ -1,0 +1,139 @@
+<!Doctype html>
+<html>
+
+<head>
+	<link rel="icon" type="icon" href="diceSix.png">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- <script src="pace.js"></script> -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="pacemath.js"></script>
+	<title>Pacemath</title>
+</head>
+<style>
+
+	body {
+		padding: 0%;
+		margin: 0px;
+		background-image: url("images/background.png");
+		background-size: cover;
+	}
+
+	img {
+		width: 50px;
+		height: auto;
+	}
+
+	td {
+		width: 50%;
+	}
+
+	button {
+		cursor: pointer;
+		width: 100%;
+		height: 100px;
+		border-radius: 20px;
+		background-color: rgb(0, 204, 255);
+	}
+
+	button:hover {
+		background-color: rgb(0, 102, 255);
+	}
+
+	.chalOpt {
+		text-shadow: 3px 2px rgb(0, 102, 255);
+		position: relative;
+		top: 0%;
+		color: rgb(153, 255, 255);
+		font-size: 50px;
+	}
+
+	.title {
+		margin-top: -50;
+		text-shadow: 3px 2px red;
+		position: relative;
+		color: rgb(153, 255, 255);
+		font-size: 70px;
+	}
+
+	.instruction {
+		float: left;
+		margin-left: 10px;
+	}
+
+	.diceImg {
+		position: relative;
+		width: 40px;
+		height: 40px;
+		top: 20px;
+
+	}
+
+	.playbutton {
+		position: relative;
+		width: 200px;
+		height: 50px;
+		border-radius: 10px;
+	}
+
+	.solution {
+		position: relative;
+		font-size: 30px;
+		top: 20px;
+	}
+
+	#OptionPage {
+		position: relative;
+		top: -50px;
+	}
+
+	#popUpOption {
+		position: relative;
+		top: -50px;
+	}
+
+	#firstOption {
+		padding: 1%;
+		width: 400px;
+		height: 350px;
+		border: solid 1px black;
+		background-color: white;
+		z-index: 10px;
+		margin-top: 50px;
+		border-radius: 50px;
+	}
+
+	
+</style>
+<CENTER>
+
+	<body>
+		<CENTER>
+			<p class="title">PaceMath Challenge</p>
+		</CENTER>
+		<div id="OptionPage" style="display:block">
+			<center>
+				<p class="chalOpt">Challenge Options</p>
+			</center>
+			
+		</div>
+		<center>
+			<div id="popUpOption">
+				<div id="firstOption">
+					<h2>PaceMath Option 1</h2>
+					<p class="instruction"><b>Instruction :&nbsp&nbsp Count the number of dot/s from both sides of the
+							operator and return their sum</p>
+					<br>
+					<img src="images/diceThree.png" class="diceImg">
+					<img src="images/add.png" class="diceImg">
+					<img src="images/diceOne.png" class="diceImg">
+					<br>
+					<p class="solution">3 + 1 = 4</p>
+					<a href="option1.html"><button class="playbutton"><b>Play</button></a>
+				</div>
+		</center>
+	</body>
+</CENTER>
+
+</html>
