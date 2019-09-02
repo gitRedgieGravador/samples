@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Jquery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+</head>
+<style>
+    #divFrom {
+        width: 30%;
+        position: relative;
+        left: 35%;
+        margin-top: 5%;
+        background-color:rgb(255, 179, 255);
+        border-radius: 5%;
+        padding: 2%;
+    }
+
+    #divLogin {
+        width: 30%;
+        position: relative;
+        left: 35%;
+        margin-top: 5%;
+        background-color:rgb(255, 179, 255);
+        border-radius: 5%;
+        padding: 2%;
+    }
+
+    #feedback {
+        position: relative;
+    }
+
+    .feedColor {
+        color: red;
+    }
+
+    #navSignup, #navLogin {
+        cursor: pointer;
+        position: relative;
+        left: 70%;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <span class="nav-link" id="navLogin">Log in</span>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-link" id="navSignup">Sign up</span>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div id="divFrom">
+        <form>
+            <center>
+                <h1>Register</h1>
+            </center>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputfname">Firstname</label>
+                    <input type="text" class="form-control" id="inputfname" placeholder="Firstname">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputlname">Lastname</label>
+                    <input type="text" class="form-control" id="inputlname" placeholder="Lastname">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    <div id="feedback" class="feedColor"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+
+            <button id="btnSubmit" type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+
+        </form>
+    </div>
+    <div id="divLogin">
+        <form>
+            <center>
+                <h1>Log In</h1>
+            </center>
+            <div class="form-group row">
+                <label for="loginEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="loginEmail" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="loginPassword" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                </div>
+            </div>
+            <button id="btnLogin" class="btn btn-success btn-lg btn-block">
+                <h4>Log In</h4>
+            </button>
+        </form>
+    </div>
+    <script src="register.js"></script>
+</body>
+
+</html>
